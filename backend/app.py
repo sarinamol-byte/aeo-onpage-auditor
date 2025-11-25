@@ -374,8 +374,8 @@ def health():
     return jsonify({'status': 'healthy', 'tool': 'AEO On-Page Auditor'})
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
    # Railway provides PORT - MUST use it
-    port = int(os.environ.get('PORT', 8080))
-    print(f"=== Starting Flask on port {port} ===")
-    app.run(host='0.0.0.0', port=port, debug=False)
+ #   port = int(os.environ.get('PORT', 8080))
+  #  print(f"=== Starting Flask on port {port} ===")
+   # app.run(host='0.0.0.0', port=port, debug=False)
