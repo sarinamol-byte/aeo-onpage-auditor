@@ -6,6 +6,8 @@ import re
 import json
 from urllib.parse import urljoin, urlparse
 import textstat
+import os
+
 
 app = Flask(__name__)
 CORS(app)
@@ -371,8 +373,9 @@ def analyze():
 def health():
     return jsonify({'status': 'healthy', 'tool': 'AEO On-Page Auditor'})
 
-import os
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+   # Railway provides PORT - MUST use it
+    port = int(os.environ.get('PORT', 8080))
+    print(f"=== Starting Flask on port {port} ===")
     app.run(host='0.0.0.0', port=port, debug=False)
